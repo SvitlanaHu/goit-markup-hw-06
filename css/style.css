@@ -30,9 +30,30 @@ body {
 }
 
 .container {
-  width: 1158px;
+  min-width: none;
+  max-width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+@media (min-width: 428px) {
+  .container {
+    width: 428px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .container {
+    width: 1158px;
+  }
 }
 
 .link {
@@ -213,7 +234,13 @@ input {
   background-position: center;
   background-size: cover;
 }
-
+/*
+@media (min-resolution: 192dpi) {
+  .title-background-box {
+    background-image: url("../images/main-images/people-office@2x.jpg");
+  }
+}
+*/
 .title-box {
   width: 1358px;
   padding: 188px auto;
