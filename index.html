@@ -53,7 +53,7 @@
           </a>
 
           <button
-            class="menu-button js-open-menu"
+            class="menu-toggle js-open-menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
           >
@@ -62,7 +62,7 @@
             </svg>
           </button>
 
-          <ul class="placement-in-a-line list navigation-box js-menu-container">
+          <ul class="placement-in-a-line list navigation-box menu-hidden">
             <li>
               <a class="link text-link current" href="./index.html"> Studio </a>
             </li>
@@ -75,9 +75,9 @@
           </ul>
         </nav>
 
-        <address class="contacts js-menu-container">
-          <ul class="list placement-in-a-line navigation-box">
-            <li>
+        <address class="contacts">
+          <ul class="list address-box menu-hidden">
+            <li class="address-item">
               <a class="link contact-box" href="mailto:info@devstudio.com">
                 info@devstudio.com
               </a>
@@ -86,6 +86,58 @@
             <li>
               <a class="link contact-box" href="tel:+110001111111">
                 +11 (000) 111-11-11
+              </a>
+            </li>
+          </ul>
+
+          <ul
+            class="placement-in-a-line list social-links social-team-card social-menu-hidden"
+          >
+            <li class="social-card-item">
+              <a
+                class="link link-team-icons"
+                href="https://www.instagram.com/"
+                target="_blank"
+              >
+                <svg class="icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-f-instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-card-item">
+              <a
+                class="link link-team-icons"
+                href="https://twitter.com/"
+                target="_blank"
+              >
+                <svg class="icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-f-twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-card-item">
+              <a
+                class="link link-team-icons"
+                href="https://www.facebook.com/"
+                target="_blank"
+              >
+                <svg class="icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-f-facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-card-item">
+              <a
+                class="link link-team-icons"
+                href="https://www.linkedin.com/"
+                target="_blank"
+              >
+                <svg class="icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-f-linkedin"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -111,13 +163,14 @@
           </button>
         </div>
       </section>
+
       <!--============================================= 
       2. Advantages
- ============================================= -->
+      ============================================= -->
       <section class="main-advantages-section section">
         <div class="container">
           <h2 class="visually-hidden">Advantages</h2>
-          <ul class="list placement-in-a-line advantages-gap">
+          <ul class="list advantages-gap">
             <li class="advantages-card">
               <div class="icon-box">
                 <svg class="advantages-icon" width="64" height="64">
@@ -542,7 +595,7 @@
     -->
     <footer class="footer-box section">
       <div class="container footer-container">
-        <div class="footer-logo-box">
+        <div class="footer-logo-box footer-item">
           <a class="link logo logo-footer" href="./index.html">
             Web<span class="logo-studio-footer">Studio</span>
           </a>
@@ -553,7 +606,7 @@
           </p>
         </div>
 
-        <div>
+        <div class="footer-item">
           <p class="social-title">Social media</p>
           <ul class="placement-in-a-line list social-footer-links">
             <li class="social-links-list">
@@ -606,7 +659,7 @@
           </ul>
         </div>
 
-        <div class="footer-subscribe">
+        <div class="footer-subscribe footer-item">
           <p class="social-form-title">Subscribe</p>
           <form class="footer-form">
             <label class="social-title">
@@ -725,10 +778,11 @@
         </form>
       </div>
     </div>
+
     <!-- Menu window. -->
     <div js-menu-container class="js-menu-container is-hidden">
-      <div class="menu-window">
-        <button js-close-menu type="button" class="js-close-menu">
+      <div class="js-menu-container menu-window">
+        <button type="button" class="js-close-menu">
           <svg class="icon-modal" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
