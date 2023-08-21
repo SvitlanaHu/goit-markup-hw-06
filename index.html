@@ -52,7 +52,17 @@
             web<span class="logo-studio">Studio</span>
           </a>
 
-          <ul class="placement-in-a-line list navigation-box">
+          <button
+            class="menu-button js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="js-open-menu menu-icon" width="32" height="22">
+              <use href="./images/icons.svg#menu-hamburger"></use>
+            </svg>
+          </button>
+
+          <ul class="placement-in-a-line list navigation-box js-menu-container">
             <li>
               <a class="link text-link current" href="./index.html"> Studio </a>
             </li>
@@ -65,7 +75,7 @@
           </ul>
         </nav>
 
-        <address class="contacts">
+        <address class="contacts js-menu-container">
           <ul class="list placement-in-a-line navigation-box">
             <li>
               <a class="link contact-box" href="mailto:info@devstudio.com">
@@ -531,7 +541,7 @@
       =============================================
     -->
     <footer class="footer-box section">
-      <div class="container placement-in-a-line footer-container">
+      <div class="container footer-container">
         <div class="footer-logo-box">
           <a class="link logo logo-footer" href="./index.html">
             Web<span class="logo-studio-footer">Studio</span>
@@ -715,7 +725,17 @@
         </form>
       </div>
     </div>
+    <!-- Menu window. -->
+    <div js-menu-container class="js-menu-container is-hidden">
+      <div class="menu-window">
+        <button js-close-menu type="button" class="js-close-menu">
+          <svg class="icon-modal" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
