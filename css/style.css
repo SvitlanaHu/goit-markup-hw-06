@@ -31,11 +31,9 @@ body {
 
 .container {
   min-width: 320px;
-  max-width: 1158px;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 428px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 
 .link {
@@ -320,19 +318,9 @@ input {
 }
 
 .advantages-gap {
-  gap: 24px;
-}
-
-.icon-box {
   display: flex;
-  width: 264px;
-  height: 112px;
-  margin-bottom: 8px;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--cloud);
-  border-radius: 4px;
-  margin-bottom: 8px;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .advantages-card {
@@ -343,8 +331,8 @@ input {
 
 .advantages-title {
   margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 36px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-align: center;
@@ -704,8 +692,13 @@ input {
   color: var(--white);
 }
 
+.footer-form {
+  min-width: 264px;
+  max-width: 396px;
+}
+
 .subscribe-imput {
-  width: 264px;
+  width: 100%;
   height: 40px;
 
   padding-left: 16px;
@@ -777,8 +770,7 @@ input {
   pointer-events: none;
 }
 
-.modal-card,
-.menu-window {
+.modal-card {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1072,6 +1064,15 @@ input {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .modal-card {
+    max-width: 392px;
+    padding: 16px;
+  }
+  .form-imput,
+  .form-textarea,
+  .form-accept-box {
+  }
 }
 
 @media (min-width: 428px) {
@@ -1082,7 +1083,7 @@ input {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 1157px;
+    max-width: 768px;
   }
   .menu-toggle,
   .social-menu-hidden {
@@ -1112,10 +1113,11 @@ input {
   }
 
   .advantages-gap {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
-    align-items: center;
+    column-gap: 24px;
+    row-gap: 72px;
+    align-items: start;
     justify-content: center;
   }
   .advantages-card {
@@ -1126,33 +1128,108 @@ input {
   .main-opportunities-section {
     display: none;
   }
-
   .advantages-title {
     text-align: left;
+  }
+  .customers-container {
+    max-width: 568px;
   }
   .customers-link-list {
     width: calc((100% - 48px) / 3);
   }
   .footer-container {
+    max-width: 528px;
+    margin: 0 auto;
+    padding: 0 16px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: start;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+  .footer-logo-box {
+    margin-right: 0px;
+  }
+
+  .footer-item {
+    padding: 0;
+    margin: 0;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .subscribe-imput {
+    width: 264px;
+  }
+  .subscribe-button {
+    margin-left: 24px;
   }
 }
 
 @media (min-width: 1158px) {
-  .address-item {
+  .address-box {
     display: flex;
     flex-direction: row;
+    gap: 40px;
   }
-  .container {
-    min-width: 1158px;
+  .container,
+  .customers-container {
+    max-width: 1158px;
+    padding: 0;
+  }
+  .icon-box {
+    display: flex;
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cloud);
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  .title-background-box {
+    padding: 188px auto;
+  }
+
+  .main-advantages-section,
+  .main-section-team,
+  .customers {
+    padding: 120px auto;
+  }
+  .advantages-title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
   }
   .advantages-card {
     width: calc((100% - 72px) / 4);
   }
+
+  .main-opportunities-section {
+    padding-bottom: 120px;
+  }
+
   .customers-link-list {
     width: calc((100% - 120px) / 6);
+  }
+
+  .footer-box {
+    padding: 100px auto;
+  }
+  .footer-container {
+    gap: 0;
+  }
+  .footer-logo-box {
+    margin-right: 120px;
+  }
+  .social-footer-links {
+    margin-right: 96px;
+    padding: 0;
   }
 }
