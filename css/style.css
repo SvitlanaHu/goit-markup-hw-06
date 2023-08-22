@@ -693,8 +693,7 @@ input {
 }
 
 .footer-form {
-  min-width: 264px;
-  max-width: 396px;
+  width: 396px;
 }
 
 .subscribe-imput {
@@ -725,7 +724,7 @@ input {
   display: flex;
 
   padding: 8px 24px;
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   align-items: center;
   justify-content: center;
@@ -832,8 +831,8 @@ input {
 }
 
 .form-box {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  margin: 0 auto;
 }
 
 .form-name-box {
@@ -1012,15 +1011,16 @@ input {
   | Menu window
   |============================
 */
+.navigation-modal {
+  display: none;
+}
 
-.menu-window {
+.navigation-modal .overlay-navigation {
   position: fixed;
-  top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 32px;
-  background: var(--white);
+  top: 0;
+  width: 100%;
+  height: 100%;
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
@@ -1029,15 +1029,35 @@ input {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-window.js-open-menu {
-  transform: translateX(0);
+.navigation-modal .content-navigation {
+  display: block;
+  margin: 50px auto;
+  width: 500px;
+  min-height: 300px;
+  background-color: var(--white);
+  padding: 80px 35px 40px 40px;
+  position: relative;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-window .menu-toggle {
+.navigation-modal .js-close-menu {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  right: 24px;
+  top: 24px;
+  transition: 0.5s;
+  cursor: pointer;
 }
+
+/**
+  |============================
+  | Adaptation
+  |============================
+*/
 
 @media (max-width: 767px) {
   .menu-hidden,
@@ -1069,9 +1089,8 @@ input {
     max-width: 392px;
     padding: 16px;
   }
-  .form-imput,
-  .form-textarea,
-  .form-accept-box {
+  .form-box {
+    width: 100%;
   }
 }
 
@@ -1132,13 +1151,22 @@ input {
     text-align: left;
   }
   .customers-container {
-    max-width: 568px;
+    max-width: 584px;
   }
   .customers-link-list {
     width: calc((100% - 48px) / 3);
   }
+
+  .project-cards {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .card-of-project {
+    width: calc((100% - 24px) / 2);
+  }
+
   .footer-container {
-    max-width: 528px;
+    max-width: 584px;
     margin: 0 auto;
     padding: 0 16px;
     display: flex;
@@ -1217,6 +1245,14 @@ input {
 
   .customers-link-list {
     width: calc((100% - 120px) / 6);
+  }
+
+  .project-cards {
+    column-gap: 24px;
+    row-gap: 48px;
+  }
+  .card-of-project {
+    width: calc((100% - 48px) / 3);
   }
 
   .footer-box {

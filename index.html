@@ -53,6 +53,7 @@
           </a>
 
           <button
+            type="button"
             class="menu-toggle js-open-menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
@@ -86,58 +87,6 @@
             <li>
               <a class="link contact-box" href="tel:+110001111111">
                 +11 (000) 111-11-11
-              </a>
-            </li>
-          </ul>
-
-          <ul
-            class="placement-in-a-line list social-links social-team-card social-menu-hidden"
-          >
-            <li class="social-card-item">
-              <a
-                class="link link-team-icons"
-                href="https://www.instagram.com/"
-                target="_blank"
-              >
-                <svg class="icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-f-instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-card-item">
-              <a
-                class="link link-team-icons"
-                href="https://twitter.com/"
-                target="_blank"
-              >
-                <svg class="icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-f-twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-card-item">
-              <a
-                class="link link-team-icons"
-                href="https://www.facebook.com/"
-                target="_blank"
-              >
-                <svg class="icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-f-facebook"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-card-item">
-              <a
-                class="link link-team-icons"
-                href="https://www.linkedin.com/"
-                target="_blank"
-              >
-                <svg class="icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-f-linkedin"></use>
-                </svg>
               </a>
             </li>
           </ul>
@@ -780,16 +729,19 @@
     </div>
 
     <!-- Menu window. -->
-    <div js-menu-container class="js-menu-container is-hidden">
-      <div class="js-menu-container menu-window" id="mobile-menu">
-        <button type="button" class="menu-toggle js-close-menu">
-          <svg class="icon-modal" width="8" height="8">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-      <div>
-                  <ul class="placement-in-a-line list navigation-box menu-hidden">
+    <div class="navigation-modal js-menu-container">
+      <div
+        js-menu-container
+        class="overlay-navigation is-hidden page-container"
+      >
+        <div class="content-navigation">
+          <button class="menu-toggle js-close-menu">
+            <svg class="icon-modal" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <ul class="placement-in-a-line list navigation-box menu-hidden">
             <li>
               <a class="link text-link current" href="./index.html"> Studio </a>
             </li>
@@ -800,77 +752,76 @@
               <a class="link text-link" href=""> Contacts </a>
             </li>
           </ul>
-        </nav>
 
-        <address class="contacts">
-          <ul class="list address-box menu-hidden">
-            <li class="address-item">
-              <a class="link contact-box" href="mailto:info@devstudio.com">
-                info@devstudio.com
-              </a>
-            </li>
+          <address class="contacts">
+            <ul class="list address-box menu-hidden">
+              <li class="address-item">
+                <a class="link contact-box" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
 
-            <li>
-              <a class="link contact-box" href="tel:+110001111111">
-                +11 (000) 111-11-11
-              </a>
-            </li>
-          </ul>
+              <li>
+                <a class="link contact-box" href="tel:+110001111111">
+                  +11 (000) 111-11-11
+                </a>
+              </li>
+            </ul>
 
-          <ul
-            class="placement-in-a-line list social-links social-team-card social-menu-hidden"
-          >
-            <li class="social-card-item">
-              <a
-                class="link link-team-icons"
-                href="https://www.instagram.com/"
-                target="_blank"
-              >
-                <svg class="icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-f-instagram"></use>
-                </svg>
-              </a>
-            </li>
+            <ul
+              class="placement-in-a-line list social-links social-team-card social-menu-hidden"
+            >
+              <li class="social-card-item">
+                <a
+                  class="link link-team-icons"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                >
+                  <svg class="icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-f-instagram"></use>
+                  </svg>
+                </a>
+              </li>
 
-            <li class="social-card-item">
-              <a
-                class="link link-team-icons"
-                href="https://twitter.com/"
-                target="_blank"
-              >
-                <svg class="icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-f-twitter"></use>
-                </svg>
-              </a>
-            </li>
+              <li class="social-card-item">
+                <a
+                  class="link link-team-icons"
+                  href="https://twitter.com/"
+                  target="_blank"
+                >
+                  <svg class="icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-f-twitter"></use>
+                  </svg>
+                </a>
+              </li>
 
-            <li class="social-card-item">
-              <a
-                class="link link-team-icons"
-                href="https://www.facebook.com/"
-                target="_blank"
-              >
-                <svg class="icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-f-facebook"></use>
-                </svg>
-              </a>
-            </li>
+              <li class="social-card-item">
+                <a
+                  class="link link-team-icons"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
+                  <svg class="icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-f-facebook"></use>
+                  </svg>
+                </a>
+              </li>
 
-            <li class="social-card-item">
-              <a
-                class="link link-team-icons"
-                href="https://www.linkedin.com/"
-                target="_blank"
-              >
-                <svg class="icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-f-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </address>
+              <li class="social-card-item">
+                <a
+                  class="link link-team-icons"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                >
+                  <svg class="icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-f-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
-
     </div>
     <script src="./js/modal.js"></script>
     <script defer src="./js/mobile-menu.js"></script>
