@@ -1011,10 +1011,23 @@ input {
   | Menu window
   |============================
 */
-.navigation-modal {
-  display: none;
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
 }
 
+/*
 .navigation-modal .overlay-navigation {
   position: fixed;
   left: 0;
@@ -1051,7 +1064,7 @@ input {
   top: 24px;
   transition: 0.5s;
   cursor: pointer;
-}
+}*/
 
 /**
   |============================
@@ -1066,6 +1079,61 @@ input {
   .main-opportunities-section {
     display: none;
   }
+
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--white);
+    padding: 80px 35px 40px 40px;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-grow: 1;
+  }
+
+  .menu-link {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    flex-grow: 1;
+  }
+
+  .menu-link:hover,
+  .menu-link:focus {
+    color: var(--ocean);
+    cursor: pointer;
+  }
+
+  .contact-number {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    color: var(--iris);
+  }
+
+  .contact-mail {
+    display: block;
+    margin-bottom: 48px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.05ex;
+  }
+
+  .icon-link {
+    justify-content: space-between;
+  }
+
   .footer-form {
     display: flex;
     flex-wrap: wrap;
@@ -1098,13 +1166,17 @@ input {
   .main-title {
     font-size: 56px;
   }
+
+  .contact-number {
+    font-size: 36px;
+  }
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
   }
-  .menu-toggle,
+  .menu-button,
   .social-menu-hidden {
     display: none;
   }
@@ -1195,6 +1267,10 @@ input {
   }
   .subscribe-button {
     margin-left: 24px;
+  }
+
+  .menu-container {
+    display: none;
   }
 }
 
