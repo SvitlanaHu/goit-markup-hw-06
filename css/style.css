@@ -143,6 +143,11 @@ input {
   color: var(--navy-blue);
 }
 
+.address-box {
+  display: flex;
+  flex-direction: column;
+}
+
 .navigation-box,
 .address-box {
   gap: 40px;
@@ -264,10 +269,6 @@ input {
       ),
       url("../images/hero-images/Dark-bg@3x.jpg");
   }
-}
-
-.title-box {
-  max-width: 352px;
 }
 
 .main-title {
@@ -775,10 +776,7 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 100vw;
-  min-height: 100vh;
-  padding: 72px 16px 24px 16px;
-  margin: 96px 8px 112px 8px;
+
   background: var(--dairy);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -833,7 +831,9 @@ input {
 }
 
 .form-box {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
 }
 
@@ -984,7 +984,9 @@ input {
   min-width: 169px;
   height: 56px;
   padding: 16px 64px;
+  margin: 0 auto;
   align-self: center;
+  justify-self: center;
   color: var(--white);
   background-color: var(--iris);
   font-size: 16px;
@@ -1143,7 +1145,7 @@ input {
 
   .modal-card {
     max-width: 392px;
-    padding: 16px;
+    padding: 72px 16px 40px 16px;
   }
   .form-box {
     width: 100%;
@@ -1156,15 +1158,21 @@ input {
   }
 }
 
+/**
+  |============================
+  | Tablet version
+  |============================
+*/
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
   }
+
   .menu-button,
   .social-menu-hidden {
     display: none;
   }
-
+  /* header */
   .top-line {
     display: flex;
   }
@@ -1187,6 +1195,7 @@ input {
     display: block;
   }
 
+  /* Hero */
   .title-background-box {
     background-image: linear-gradient(
         to bottom,
@@ -1230,10 +1239,11 @@ input {
   }
 
   .main-title {
-    max-width: 496px;
+    width: 496px;
     font-size: 56px;
   }
 
+  /* 2. Advantages */
   .advantages-gap {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1253,6 +1263,8 @@ input {
   .advantages-title {
     text-align: left;
   }
+
+  /* Customers */
   .customers-container {
     max-width: 584px;
   }
@@ -1260,6 +1272,7 @@ input {
     width: calc((100% - 48px) / 3);
   }
 
+  /* Portfolio  */
   .project-cards {
     column-gap: 24px;
     row-gap: 72px;
@@ -1268,6 +1281,7 @@ input {
     width: calc((100% - 24px) / 2);
   }
 
+  /* Footer */
   .footer-container {
     max-width: 584px;
     margin: 0 auto;
@@ -1277,7 +1291,7 @@ input {
     flex-wrap: wrap;
     align-items: start;
     justify-content: flex-start;
-    gap: 24px;
+    gap: 72px 24px;
   }
   .footer-logo-box {
     margin-right: 0px;
@@ -1290,8 +1304,8 @@ input {
   .footer-form {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    width: 396px;
+
+    /* width: 396px; */
   }
 
   .subscribe-imput {
@@ -1305,9 +1319,16 @@ input {
     display: none;
   }
 
+  /* Modal window */
+  .data-modal {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
+
   .modal-card {
-    width: 408px;
-    min-height: 584px;
+    max-width: 408px;
+    max-height: 584px;
     padding: 72px 24px 24px 24px;
   }
 }
@@ -1316,12 +1337,15 @@ input {
   .contact-box {
     font-size: 12px;
   }
-  .footer-subscribe {
-    margin-top: 72px;
-  }
 }
 
+/**
+  |============================
+  | Desktop version
+  |============================
+*/
 @media (min-width: 1158px) {
+  /* Header */
   .address-box {
     display: flex;
     flex-direction: row;
@@ -1332,7 +1356,7 @@ input {
     max-width: 1158px;
     padding: 0 15px;
   }
-
+  /* Hero */
   .title-background-box {
     background-image: linear-gradient(
         to bottom,
@@ -1388,14 +1412,15 @@ input {
   }
 
   .title-background-box {
-    padding: 188px auto;
+    padding: 188px 0;
   }
 
   .main-advantages-section,
   .main-section-team,
   .customers {
-    padding: 120px auto;
+    padding: 120px 0;
   }
+
   .advantages-title {
     text-align: left;
     font-size: 20px;
@@ -1409,11 +1434,12 @@ input {
     padding-bottom: 120px;
     display: block;
   }
-
+  /* Customers */
   .customers-link-list {
     width: calc((100% - 120px) / 6);
   }
 
+  /* Portfolio */
   .project-cards {
     column-gap: 24px;
     row-gap: 48px;
@@ -1422,6 +1448,7 @@ input {
     width: calc((100% - 48px) / 3);
   }
 
+  /* Footer */
   .footer-box {
     padding: 100px auto;
   }
@@ -1431,8 +1458,8 @@ input {
   .footer-logo-box {
     margin-right: 120px;
   }
-  .social-footer-links {
-    margin-right: 96px;
+  .footer-item {
+    margin-right: 80px;
     padding: 0;
   }
 }
