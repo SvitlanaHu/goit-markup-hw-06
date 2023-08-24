@@ -1092,6 +1092,11 @@ input {
     cursor: pointer;
   }
 
+  .menu-link.current::after {
+    content: "";
+    color: var(--ocean);
+  }
+
   .contact-number {
     display: block;
     margin-bottom: 40px;
