@@ -1186,6 +1186,48 @@ input {
     display: block;
   }
 
+  .title-background-box {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-images/dark-tablet-bg.jpg);
+  }
+
+  @media (min-resolution: 144dpi) {
+    .title-background-box {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/hero-images/dark-tablet-bg@1.5x.jpg");
+    }
+  }
+
+  @media (min-resolution: 192dpi) {
+    .title-background-box {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/hero-images/dark-tablet-bg@2x.jpg");
+    }
+  }
+
+  @media (min-resolution: 288dpi) {
+    .title-background-box {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/hero-images/dark-tablet-bg@3x.jpg");
+    }
+  }
+
   .main-title {
     max-width: 496px;
     font-size: 56px;
@@ -1357,6 +1399,7 @@ input {
 
   .main-opportunities-section {
     padding-bottom: 120px;
+    display: block;
   }
 
   .customers-link-list {
