@@ -49,7 +49,6 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: space-evenly;
 }
 
 h1,
@@ -146,10 +145,10 @@ input {
 .address-box {
   display: flex;
   flex-direction: column;
+  row-gap: 12px;
 }
 
-.navigation-box,
-.address-box {
+.navigation-box {
   gap: 40px;
 }
 
@@ -272,7 +271,6 @@ input {
 }
 
 .main-title {
-  max-width: 320px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 48px;
@@ -321,7 +319,7 @@ input {
 .advantages-gap {
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  row-gap: 72px;
 }
 
 .advantages-card {
@@ -375,10 +373,6 @@ input {
   padding-top: 96px;
   padding-bottom: 96px;
   background-color: var(--cloud);
-}
-
-.advantages-gap {
-  gap: 72px;
 }
 
 .card {
@@ -458,11 +452,11 @@ input {
 
 .customers-list {
   row-gap: 72px;
+  column-gap: 16px;
 }
 
 .customers-link-list {
   width: calc((100% - 16px) / 2);
-  row-gap: 72px;
   height: 88px;
 }
 
@@ -1099,7 +1093,7 @@ input {
   .contact-number {
     display: block;
     margin-bottom: 40px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 111%;
     letter-spacing: 0.02em;
@@ -1117,7 +1111,12 @@ input {
   }
 
   .icon-link {
-    justify-content: space-between;
+    justify-content: start;
+    gap: 28px;
+  }
+
+  .main-title {
+    max-width: 320px;
   }
 
   .footer-subscribe {
@@ -1160,6 +1159,9 @@ input {
   .contact-number {
     font-size: 36px;
   }
+  .icon-link {
+    gap: 56px;
+  }
 }
 
 /**
@@ -1192,8 +1194,6 @@ input {
   }
 
   .address-box {
-    gap: 12px;
-    justify-content: space-between;
   }
   .address-item {
     display: block;
@@ -1243,7 +1243,7 @@ input {
   }
 
   .main-title {
-    width: 496px;
+    max-width: 528px;
     font-size: 56px;
   }
 
@@ -1271,6 +1271,9 @@ input {
   /* Customers */
   .customers-container {
     max-width: 584px;
+  }
+  .customers-list {
+    column-gap: 24px;
   }
   .customers-link-list {
     width: calc((100% - 48px) / 3);
@@ -1308,8 +1311,6 @@ input {
   .footer-form {
     display: flex;
     flex-direction: row;
-
-    /* width: 396px; */
   }
 
   .subscribe-imput {
@@ -1353,7 +1354,7 @@ input {
   .address-box {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    column-gap: 40px;
   }
   .container,
   .customers-container {
@@ -1403,6 +1404,10 @@ input {
     }
   }
 
+  .main-title {
+    max-width: 528px;
+  }
+
   .icon-box {
     display: flex;
     width: 264px;
@@ -1434,9 +1439,18 @@ input {
     width: calc((100% - 72px) / 4);
   }
 
+  /* 3. What are we doing */
+
   .main-opportunities-section {
     padding-bottom: 120px;
     display: block;
+  }
+  /* 4. Our team */
+  .advantages-gap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    row-gap: 72px;
   }
   /* Customers */
   .customers-link-list {
@@ -1461,6 +1475,7 @@ input {
     flex-wrap: nowrap;
     justify-content: space-between;
   }
+
   .footer-logo-box {
     margin-right: 120px;
   }
