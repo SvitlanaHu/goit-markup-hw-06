@@ -1092,8 +1092,7 @@ input {
     cursor: pointer;
   }
 
-  .menu-link.current::after {
-    content: "";
+  .menu-link.current {
     color: var(--ocean);
   }
 
@@ -1455,16 +1454,24 @@ input {
 
   /* Footer */
   .footer-box {
-    padding: 100px auto;
+    padding: 100px 0;
   }
   .footer-container {
     gap: 0;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
   .footer-logo-box {
     margin-right: 120px;
   }
-  .footer-item {
-    margin-right: 80px;
-    padding: 0;
+
+  .social-footer-links {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  .footer-links {
+    margin-right: 96px;
   }
 }
